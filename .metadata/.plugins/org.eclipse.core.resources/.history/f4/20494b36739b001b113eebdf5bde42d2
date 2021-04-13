@@ -1,0 +1,17 @@
+package queue;
+
+import java.util.*;
+
+public class Q {
+
+	public static void main(String[] args) {
+		
+		PriorityQueue<String> p = new PriorityQueue<>();
+		
+		p.add("shivam");
+		p.add("sandeep");
+		p.add("samresh");
+		System.out.println(p.element());
+	}
+
+}

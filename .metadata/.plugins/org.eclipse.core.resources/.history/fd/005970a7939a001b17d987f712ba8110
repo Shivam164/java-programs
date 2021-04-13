@@ -1,0 +1,62 @@
+package queue;
+
+import java.util.*;
+
+public class Q {
+
+	public static void main(String[] args) {
+		
+		 Scanner sc = new Scanner(System.in);
+	        int t = sc.nextInt();
+
+	        for(int i = 0;i<t;i++){
+	            Stack<Character> list = new Stack<>();
+	            String s = sc.nextLine();
+	            for(int j = 0;j<s.length();j++){
+	                list.push(s.charAt(j));
+	            }
+	            if(! list.empty()){
+	            List<Character> l = new LinkedList<>();
+	            char prev = list.pop();
+	            while(! list.empty()){
+	                int sum = 0;
+	                while(! list.empty()){
+	                if(list.peek()==prev){
+	                    list.pop();
+	                    sum++;
+	                    prev = list.pop();
+	                    sum++;
+	                }else{
+	                    l.add(prev);
+	                    prev = list.pop();
+	                    sum++;
+	                    if(list.empty()){
+	                        l.add(prev);
+	                    }
+	                }}
+	                list.clear();
+	                int n = l.size();
+	                for(int j = n-1;j>-1 && sum!=0 ;j--){
+	                    list.push(l.get(j));
+	                }
+	                l.clear();
+	            }
+	            if(list.empty()){
+	                System.out.println("KHALI");
+	            }else{
+	                while(! list.empty()){
+	                    l.add(list.pop());
+	                }
+	                int k = l.size();
+	                for(int p = 0;p<k;p++){
+	                    System.out.print(l.get(p));
+	                }
+	            }
+	            }else{
+	                System.out.println("KHALI"); 
+	            }
+	        }
+
+	}
+
+}

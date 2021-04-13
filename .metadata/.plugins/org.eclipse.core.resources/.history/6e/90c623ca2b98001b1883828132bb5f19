@@ -1,0 +1,21 @@
+package queue;
+
+import java.util.*;
+
+public class Q {
+
+	public static void main(String[] args) {
+		
+		Queue<Integer> q = new LinkedList<>();
+		
+		q.add(49);
+		q.add(2);
+		q.add(4);
+		q.clear();
+		Object o = q.getClass();
+		System.out.println(o);
+		
+
+	}
+
+}

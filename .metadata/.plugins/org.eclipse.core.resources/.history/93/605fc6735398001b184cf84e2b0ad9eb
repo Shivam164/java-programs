@@ -1,0 +1,12 @@
+package queue;
+import java.util.*;
+public class MyQueue <E>{
+	
+	public static void main(String[] args) {
+		ArrayDeque<Integer> ad = new ArrayDeque<>();
+		ad.addFirst(4);
+		ad.addFirst(45);
+		ad.pop();
+		System.out.println(ad);
+	}
+}

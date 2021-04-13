@@ -1,0 +1,17 @@
+package queue;
+
+import java.util.*;
+
+public class Q {
+
+	public static void main(String[] args) {
+		
+		PriorityQueue<Integer> p = new PriorityQueue<>();
+		
+		p.add(29);
+		p.add(3);
+		p.add(4);
+		System.out.println(p.remove());
+	}
+
+}
